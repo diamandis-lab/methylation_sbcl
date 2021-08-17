@@ -24,13 +24,13 @@ cd methylation_sbcl-main
 ```
 Sample classification using the SVM model:
 ```
-Rscript svm_predict.R --data data/M_values_methylation_sbcl_demo.csv \
+Rscript R/svm_predict.R --data data/M_values_methylation_sbcl_demo.csv \
                       --model data/svm_methylation_sbcl.rds \
                       --out_csv predictSVM_demo.csv
 ```
 Dimensional reduction with  persistent t-TSNE model using the [modelTsne package](https://github.com/oicr-gsi/modelTsne):
 ```
-Rscript tsne_persistent.R --data data/M_values_methylation_sbcl_demo.csv \
+Rscript R/tsne_persistent.R --data data/M_values_methylation_sbcl_demo.csv \
                           --model data/modelTsne_methylation_sbcl.rds \
                           --out_html resTsne_methylation_sbcl_demo.html
 ```
