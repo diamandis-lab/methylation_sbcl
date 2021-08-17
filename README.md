@@ -13,10 +13,15 @@ The demo code includes stand-alone scripts that run via bash commands.
 
 Installation of required packages
 ```
-R -e "install.packages(c('reshape2', 'dplyr', 'e1071', 'docopt', 'htmlwidgets','remotes'))"
+R -e "for(curr in c('reshape2', 'dplyr', 'e1071', 'docopt', 'htmlwidgets','remotes')){if(!require(curr, character.only = TRUE)){install.packages(curr)}}"
 R -e "remotes::install_github('https://github.com/oicr-gsi/modelTsne')"
 ```
-
+Download repository:
+```
+wget https://github.com/diamandis-lab/methylation_sbcl/archive/refs/heads/main.zip
+unzip main.zip
+cd methylation_sbcl-main
+```
 Sample classification using the SVM model:
 ```
 Rscript svm_predict.R --data data/M_values_methylation_sbcl_demo.csv \
