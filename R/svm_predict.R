@@ -67,7 +67,7 @@ doPredict<-function(opt){
   if(!is.null(opt$out_rds)){
     saveRDS(df, file=opt$out_rds)
   }
-  if(!is.null(opt$out_rds)){
+  if(!is.null(opt$out_csv)){
     write.csv(df, file=opt$out_csv, row.names=FALSE, quote=FALSE)
   }
   
