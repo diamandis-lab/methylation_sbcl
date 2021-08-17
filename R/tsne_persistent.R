@@ -18,7 +18,7 @@ opt <- docopt(doc)
 
 error.state<-FALSE
 
-if(is.null(opt$data) | is.null(opt$model) | is.null(opt$out_html) | is.null(opt$out_rds)){
+if(is.null(opt$data) & is.null(opt$model) & is.null(opt$out_html) & is.null(opt$out_rds)){
   error.state<-TRUE
   message("Missing parameters: --data, --model, --out_html and/or --out_rds")
 }else{
